@@ -31,7 +31,7 @@ use_gpu = 1 if not args.no_gpu else 0
 if not args.skip_matching:
     os.makedirs(args.source_path + "/distorted/sparse", exist_ok=True)
 
-    ## Feature extraction
+    ## Feature extraction (SIFT)
     feat_extracton_cmd = colmap_command + " feature_extractor "\
         "--database_path " + args.source_path + "/distorted/database.db \
         --image_path " + args.source_path + "/input \
