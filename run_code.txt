@@ -1,0 +1,5 @@
+conda activate 3dgs
+ffmpeg -i .{video location} -qscale:v 1 -qmin 1 -vf fps={fps} %04d.jpg
+python convert.py -s {data location}
+python train.py -s {data location}
+cd C:\Users\RC\gaussian-splatting\viewers\bin\SIBR_gaussianViewer_app.exe -m {root}\output\{file name}
